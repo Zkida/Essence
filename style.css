@@ -1,0 +1,544 @@
+/*
+ Theme Name:     Essence
+ Theme URI:      http://www.diviboutique.com/shop/essence
+ Description:    Essence is a creative portfolio theme, with a minimal design Essence is perfect to create beautiful online portfolios, combine multiples works in a clean style.
+ Author:         Divi Boutique
+ Author URI:     https://www.diviboutique.com
+ Template:       Divi
+ Version:        1.0.0
+*/
+ 
+ 
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,500,600,700|Poppins:300,400,500,600,700');
+
+/*------------------------------------------------------------------
+[1. Basic WP styles ]
+------------------------------------------------------------------*/
+.full-view {
+  height: 100vh;
+}
+
+.strike {
+  position: relative;
+}
+
+.strike::after {
+    content: '';
+    width: 0%;
+}
+
+.strike:hover:after {
+  content: '';
+  border-bottom: 1px solid #333;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+span.pretyped-text {
+  font-weight: 100;
+  font-size: 58px;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+svg.bigTriangleColor {
+    pointer-events: none;
+    background: #fff;
+    float: left;
+  }
+
+.bigTriangleColor path {
+      fill: #fff;
+  }
+
+.start-section-class.bigTriangleColor path {
+    fill: #f3f3f3;
+    stroke: #f3f3f3;
+    stroke-width: 4;
+}
+
+.end-section-class.bigTriangleColor path {
+    fill: #f3f3f3;
+    stroke: #f3f3f3;
+    stroke-width: 4;
+}
+
+svg.bigTriangleColor.home-svg-left {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background: none;
+  z-index: 99;
+}
+
+svg.bigTriangleColor.home-svg-right {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  background: none;
+  z-index: 99;
+}
+
+.testimonial-star {
+	color: #c7544d;
+}
+
+/*------------------------------------------------------------------
+[2. Contact Form ]
+------------------------------------------------------------------*/
+
+.et_contact_bottom_container {
+  float: none !important;
+  margin-top: -1.5%;
+  text-align: center !important;
+}
+
+/*------------------------------------------------------------------
+[3. Portfolio ]
+------------------------------------------------------------------*/
+
+#main-portfolio .et_pb_portfolio_item {
+  margin: 0 0 31px 0 !important;
+  width: 33.3334% !important;
+  float: left !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  overflow: hidden !important;
+  height: auto;
+  position: relative !important;
+}
+
+#main-portfolio .et_portfolio_image {
+  overflow: hidden !important;
+}
+
+#main-portfolio .et_portfolio_image::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+   	z-index: 9;
+}
+
+#main-portfolio .et_portfolio_image:hover::before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+#main-portfolio .et_portfolio_image img {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+
+}
+
+#main-portfolio .et_portfolio_image:hover img {
+    opacity: 0.6;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+#main-portfolio .et_pb_portfolio_filters {
+  text-align: center !important;
+  margin-bottom: 30px;
+}
+
+#main-portfolio .et_pb_portfolio_filters ul {
+  margin: auto;
+  display: inline-block;
+}
+
+#main-portfolio .et_pb_portfolio_filters ul li:hover {
+  color: #333;
+}
+
+#main-portfolio .et_pb_portfolio_filters ul li {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  float: left;
+  margin-right: 0px;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: #777;
+}
+
+#main-portfolio .et_pb_portfolio_filters li a {
+    display: block;
+    overflow: hidden;
+    height: auto;
+    margin: -1px -1px 0 0;
+    padding: 10px 20px;
+    border: 0px solid #e2e2e2 !important;
+    color: #666;
+    background-color: #fff;
+}
+
+#main-portfolio .et_pb_portfolio_filters li a:hover {
+  color: #000000!important;
+  background: #f3f3f3!important;
+}
+
+#main-portfolio .et_pb_portfolio_filters li a.active {
+    color: #fff !important;
+    background-color: #000;
+}
+
+/*------------------------------------------------------------------
+[3. WERESPAWN Menu ]
+------------------------------------------------------------------*/
+
+.menu-wrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    padding-top: 50px;
+    padding-right: 90px;
+}
+
+.main-menu {
+  float: right;
+}
+
+.main-menu ul {
+  color: #888;
+  list-style: none;
+  text-align: left;
+  margin-right: 30px;
+  margin-top: 2px;
+}
+
+.main-menu ul.sf-menu {
+  float: right;
+}
+
+.main-menu ul.sf-menu > li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.main-menu ul.sf-menu > li > a{
+color: #fff;
+font-size: 13px;
+font-weight: 600;
+-webkit-font-smoothing: antialised;
+padding-bottom: 10px;
+font-family: 'Montserrate', sans-serif;
+text-transform: uppercase;
+}
+
+.main-menu ul.sf-menu > li > a:hover{
+  color: #c7544d;
+}
+
+.menu-icons-inside {
+	position: relative;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+	z-index: 9999;
+}
+
+.menu-icon {
+	position: relative;
+	color: #fff;
+	float: right;
+	height: 26px;
+	margin-right: 0;
+	display: inline-block;
+}
+
+.menu-icon-create {
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	position: relative;
+	top: 12px;
+	vertical-align: bottom;
+	background: #fff;
+	white-space: nowrap;
+	-webkit-transition: all ease .3s;
+  -moz-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s;
+  float: left;
+}
+
+.menu-icon-create::before {
+	position: absolute;
+	top: -8px;
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 2px;
+  -webkit-transition: all ease .3s;
+  -moz-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s;
+  outline: 1px solid transparent;
+  left: 0;
+  background: #fff;
+}
+
+.menu-icon-create::after {
+	position: absolute;
+	top: 8px;
+	content: '';
+	display: inline-block;
+	width: 23px;
+	height: 2px;
+	-webkit-transition: all ease .3s;
+  -moz-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s;
+  outline: 1px solid transparent;
+  left: 0;
+  background: #fff;
+}
+
+.main-menu ul.sf-menu > li {
+	position: relative;
+    visibility: hidden;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+}
+
+.main-menu ul.sf-menu > li {
+    opacity: 0;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.main-menu.showmenu ul.sf-menu > li {
+    visibility: visible;
+    filter: alpha(opacity=100);
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+.main-menu ul.sf-menu > li:nth-child(n+1) {
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.main-menu ul.sf-menu > li:nth-child(n+2) {
+	-webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.main-menu ul.sf-menu  > li:nth-child(n+3) {
+    -webkit-transition-duration: 400ms;
+    -moz-transition-duration: 400ms;
+    -o-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    transition-delay: 400ms;
+}
+
+.main-menu ul.sf-menu > li:nth-child(n+4) {
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;
+}
+
+.main-menu ul.sf-menu > li:nth-child(n+5) {
+    -webkit-transition-duration: 600ms;
+    -moz-transition-duration: 600ms;
+    -o-transition-duration: 600ms;
+    transition-duration: 600ms;
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    transition-delay: 600ms;
+}
+
+.main-menu.showmenu ul.sf-menu > li:nth-last-child(n+1) {
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.main-menu.showmenu ul.sf-menu > li:nth-last-child(n+2) {
+	-webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.main-menu.showmenu ul.sf-menu  > li:nth-last-child(n+3) {
+    -webkit-transition-duration: 400ms;
+    -moz-transition-duration: 400ms;
+    -o-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    transition-delay: 400ms;
+}
+
+.main-menu.showmenu ul.sf-menu > li:nth-last-child(n+4) {
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;
+}
+
+.main-menu.showmenu ul.sf-menu > li:nth-last-child(n+5) {
+    -webkit-transition-duration: 600ms;
+    -moz-transition-duration: 600ms;
+    -o-transition-duration: 600ms;
+    transition-duration: 600ms;
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    transition-delay: 600ms;
+}
+
+.menu-icon.opened .menu-icon-create:before {
+	top: 100%;
+	-webkit-transform: rotate(-48deg) translate(2px, 0);
+	-moz-transform: rotate(-48deg) translate(2px, 0);
+	-ms-transform: rotate(-48deg) translate(2px, 0);
+	-o-transform: rotate(-48deg) translate(2px, 0);
+	transform: rotate(-48deg) translate(2px, 0)
+}
+
+.menu-icon.opened .menu-icon-create:after{
+	-webkit-transform: rotate(45deg) translate(0, 1px);
+	-moz-transform: rotate(45deg) translate(0, 1px);
+	-ms-transform: rotate(45deg) translate(0, 1px);
+	-o-transform: rotate(45deg) translate(0, 1px);
+	transform: rotate(45deg) translate(0, 1px);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	-ms-transform-origin: 100% 0;
+	-o-transform-origin: 100% 0;
+	transform-origin: 100% 0
+}
+
+.menu-icon.opened .menu-icon-create {
+	background: none;
+}
+
+/*------------------------------------------------------------------
+[3. Media Styles ]
+------------------------------------------------------------------*/
+
+@media only screen and (max-width: 980px){
+  .text-center-mobile {
+    text-align: center !important;
+  }
+  .text-center-mobile p{
+    text-align: center !important;
+  }
+  #main-portfolio .et_pb_portfolio_item {
+  	width: 50% !important;
+  }
+  .menu-wrapper {
+  	display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .typed-div-284 span {
+    font-size: 80px;
+  }
+
+  span.pretyped-text {
+    font-size: 40px;
+  }
+
+  svg.bigTriangleColor {
+    height: 100px;
+  }
+  
+  #main-portfolio .et_pb_portfolio_filters ul li {
+    width: auto !important;
+  }
+  
+  #main-portfolio .et_pb_portfolio_filters {
+    text-align: center !important;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .typed-div-284 span {
+    font-size: 50px;
+  }
+
+  span.pretyped-text {
+    font-size: 30px;
+  }
+
+  svg.bigTriangleColor {
+    height: 50px;
+  }
+  
+  #main-portfolio .et_pb_portfolio_item {
+    width: 100% !important;
+  }
+  
+  #main-portfolio .et_pb_portfolio_filters ul li {
+    width: auto !important;
+  }
+  
+  #main-portfolio .et_pb_portfolio_filters {
+    text-align: center !important;
+    margin-bottom: 30px;
+  }
+}
