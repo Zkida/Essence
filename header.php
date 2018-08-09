@@ -43,7 +43,7 @@
           	
 
            wp_nav_menu( array( 
-           	'theme_location' => 'werespawn-menu', 
+           	'theme_location' => 'essence-top-menu', 
            	'container_class' => 'menu-main-nav-menu-container', 
            	'items_wrap' => '<ul id="menu-main-nav-menu" class="sf-menu sf-js-enabled">%3$s</ul>'
            ) ); 

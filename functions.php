@@ -17,7 +17,7 @@ add_action( 'wp_enqueue_scripts', 'essence_theme_enqueue_styles' );
 * Register Essence Top Menu
 **********************************************************************************/
 function essence_register_menu() {
-  register_nav_menu('essence-top-menu',__( 'Top Menu' ));
+    register_nav_menu('essence-top-menu',__( 'Essence Top Menu' ));
 }
 
 add_action( 'init', 'essence_register_menu' );

@@ -54,11 +54,13 @@ function ocdi_before_widgets_import($selected_import) {
 add_action('pt-ocdi/before_widgets_import', 'ocdi_before_widgets_import');
 
 function ocdi_after_import_setup() {
-  $main_menu = get_term_by( 'name', 'Main Menu', 'nav_menu' );
+    $main_menu = get_term_by( 'name', 'Main Menu', 'nav_menu' );
+    //$top_menu = get_term_by( 'name', 'Top Menu', 'nav_menu' );
     $secondary_menu = get_term_by( 'name', 'Secondary Menu', 'nav_menu' );
     set_theme_mod( 'nav_menu_locations', array(
-'primary-menu' => $main_menu->term_id,
-'secondary-menu' => $secondary_menu->term_id,
+        'primary-menu' => $main_menu->term_id,
+        'essence-top-menu' => $main_menu->term_id,
+        'secondary-menu' => $secondary_menu->term_id,
         )
     );
         // Assign home page and posts page (blog page).
